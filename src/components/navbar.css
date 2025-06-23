@@ -1,0 +1,137 @@
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: inherit; /* ημιδιαφανές μαύρο background */
+  z-index: 10; /* Να είναι πάνω από όλα */
+}
+/* Μόνο για Home (hero video) */
+.home-navbar {
+  position: absolute;
+  background: transparent;
+}
+
+/* Για άλλες σελίδες */
+.default-navbar {
+  position: absolute;
+  background-color: inherit;
+}
+
+.nav-HAM,
+.nav-C {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Links style */
+.navbar a {
+  text-decoration: none;
+  color: white; /* Άσπρο για να φαίνεται πάνω στο μαύρο ημιδιαφανές */
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  color: #c9c7c7; /* Ζεστό χρώμα hover */
+}
+
+.nav-C {
+  border: 2px solid #d3d0cb;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  background-color: rgba(240, 165, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(240, 165, 0, 0.4); /* ελαφριά σκιά */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-C:hover {
+  border-color: #ffffff; /* πιο σκούρο περίγραμμα */
+  box-shadow: 0 4px 12px rgba(196, 127, 0, 0.6);
+  color: white;
+}
+
+/* About Page */
+/* About Page */
+.about-navbar {
+  background-color: #3b2310e8;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+
+  z-index: 10;
+}
+
+/* Ειδικά για το about-navbar links */
+.about-navbar a {
+  color: #ffffff;
+}
+
+.mobile-hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: #3b2310e8;
+  padding: 1rem 1.5rem;
+  gap: 3rem;
+  transition: left 0.3s ease;
+  z-index: 10;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+/* "X" close icon inside menu */
+.close-icon {
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  z-index: 11;
+}
+
+.mobile-menu a {
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .mobile-hamburger {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .nav-C {
+    margin-left: auto;
+    z-index: 11;
+  }
+}

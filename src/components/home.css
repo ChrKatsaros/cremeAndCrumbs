@@ -1,0 +1,157 @@
+.header-video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  grid-area: header;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.header-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+  filter: brightness(62%);
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 0 1rem;
+  gap: 20px;
+}
+
+.header-title h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.3rem;
+}
+
+.C {
+  font-size: 4.7rem;
+}
+
+.and {
+  font-size: 3.7rem;
+  font-style: italic;
+}
+
+.scroll-button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #fff;
+  color: #333;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  opacity: 60%;
+  position: relative;
+  right: 21px;
+}
+
+.scroll-button:hover {
+  transform: scale(1.04);
+  transition: transform 0.3s ease;
+
+  opacity: 100%;
+}
+
+.home-page {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'welcome'
+    'offer'
+    'menu';
+  grid-template-rows: auto auto auto auto;
+  gap: 2rem;
+}
+
+.page-container {
+  max-width: 1140px;
+  width: 90%;
+  margin: 1.3rem auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .header-video-container {
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 50%;
+    filter: brightness(62%);
+    position: absolute; /* καλύπτει τον container */
+    top: 0;
+    left: 0;
+  }
+
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+    z-index: 2;
+  }
+
+  .header-title h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+    margin: 0;
+  }
+
+  .C {
+    font-size: 2.6rem;
+  }
+
+  .and {
+    font-size: 1.8rem;
+    font-style: italic;
+  }
+
+  .scroll-button {
+    font-size: 0.9rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    opacity: 0.8;
+    right: unset;
+
+    align-self: center;
+  }
+
+  .page-container {
+    width: 95vw;
+    padding: 0 1rem;
+  }
+}
