@@ -12,21 +12,22 @@ function Home() {
   const location = useLocation();
   const videoRef = useRef(null);
   const [shouldScroll, setShouldScroll] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
-  // Όταν το URL αλλάξει και περιέχει #menu, σηματοδοτούμε ότι πρέπει να κάνουμε scroll
   useEffect(() => {
     if (location.hash === '#menu') {
       setShouldScroll(true);
     }
   }, [location]);
 
-  // Όταν φορτώσει το video και το shouldScroll είναι true, κάνουμε scroll με delay
   const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+
     if (shouldScroll) {
       setTimeout(() => {
         const element = document.getElementById('menu');
         if (element) {
-          const yOffset = 0; // για sticky navbar
+          const yOffset = 0;
           const y =
             element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
@@ -38,7 +39,6 @@ function Home() {
 
   return (
     <div className="home-page">
-      {/* Άγκυρα για scroll top */}
       <Element name="top" id="top" style={{ position: 'absolute', top: 0 }} />
 
       <section className="header-video-container">
@@ -57,20 +57,31 @@ function Home() {
         </video>
 
         <div className="header-overlay">
-          <div className="header-title">
+          {/* Απόκρυψη / εμφάνιση h1 και button μέχρι να φορτώσει το video */}
+          <div
+            className="header-title"
+            style={{
+              opacity: videoLoaded ? 1 : 0,
+              transition: 'opacity 1s ease-in-out',
+            }}
+          >
             <h1>
               <span className="C">C</span>rème <span className="and">&</span>{' '}
-              <span className="C">C</span>
-              rumbs
+              <span className="C">C</span>rumbs
             </h1>
           </div>
-          <div className="header-cta">
-            {/* Scroll link για smooth scroll στο menu */}
+          <div
+            className="header-cta"
+            style={{
+              opacity: videoLoaded ? 1 : 0,
+              transition: 'opacity 1s ease-in-out',
+            }}
+          >
             <Link
               to="menu"
               smooth={true}
               duration={500}
-              offset={0} // ίδιο offset με το scroll όταν έρχεται από hash
+              offset={0}
               className="scroll-button"
             >
               OUR MENU
