@@ -125,47 +125,76 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
   }
 
   .footer-section {
-    max-width: 400px;
-    margin-bottom: 2rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
   }
 
-  /* Οργάνωση σειράς footer sections στο mobile */
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* σωστή σειρά με order */
   .footer-logo {
     order: 1;
-    margin-bottom: 2rem;
-    max-width: 230px;
-    position: relative;
+    margin-bottom: 1rem;
+    max-width: 180px;
     top: 0;
   }
 
   .store-info {
     order: 2;
-    text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .store-info p {
+    font-size: 1rem;
   }
 
   .contact-form {
     order: 3;
-    max-width: 320px;
-    margin: 0 auto 2rem auto;
+    max-width: 100%;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    font-size: 1.1rem;
+    padding: 0.4rem 0;
   }
 
   .socials {
     order: 4;
-    text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .socials h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-icons {
+    font-size: 1.6rem;
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+    margin-top: 1rem;
   }
 }

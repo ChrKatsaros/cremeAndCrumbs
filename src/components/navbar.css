@@ -44,8 +44,7 @@
   border: 2px solid #d3d0cb;
   border-radius: 9999px;
   padding: 0.5rem 1rem;
-  background-color: rgba(240, 165, 0, 0.15);
-  box-shadow: 0 2px 8px rgba(240, 165, 0, 0.4); /* ελαφριά σκιά */
+
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -115,6 +114,24 @@
   font-size: 1.6rem;
   text-decoration: none;
   letter-spacing: 0.2rem;
+}
+
+/* Social icons at the bottom */
+.mobile-socials {
+  margin-top: 2rem; /* Σταθερή απόσταση από τα πάνω στοιχεία */
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.mobile-socials a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.mobile-socials a:hover {
+  color: #bdbbbb;
 }
 
 .desktop-only {

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { AiOutlineHome } from 'react-icons/ai'; // το σπιτάκι
+import { AiOutlineHome } from 'react-icons/ai';
+import { GiCroissant, GiCupcake } from 'react-icons/gi';
+import { FaCoffee } from 'react-icons/fa';
 import './menu.css';
 
 function Menu() {
   return (
     <nav className="menu-wrapper">
-      {/* Σπιτάκι αριστερά */}
+      {/* Σπιτάκι */}
       <Link
         to="top"
         smooth={true}
@@ -17,15 +19,40 @@ function Menu() {
         <AiOutlineHome size={28} />
       </Link>
 
-      {/* Οι υπόλοιποι σύνδεσμοι */}
-      <Link to="baked-goods" smooth={true} duration={500}>
-        Baked Goods
+      {/* Baked Goods - Croissant */}
+      <Link
+        to="baked-goods"
+        smooth={true}
+        duration={500}
+        className="menu-link"
+        title="Baked Goods"
+      >
+        <span className="menu-text">Baked Goods</span>
+        <GiCroissant className="menu-icon" size={35} />
       </Link>
-      <Link to="drinks-coffee" smooth={true} duration={500}>
-        Drinks & Coffee
+
+      {/* Drinks & Coffee - Coffee icon */}
+      <Link
+        to="drinks-coffee"
+        smooth={true}
+        duration={500}
+        className="menu-link"
+        title="Drinks & Coffee"
+      >
+        <span className="menu-text">Drinks & Coffee</span>
+        <FaCoffee className="menu-icon" size={35} />
       </Link>
-      <Link to="cakes-sweets" smooth={true} duration={500}>
-        Cakes & Sweets
+
+      {/* Cakes & Sweets - Cupcake */}
+      <Link
+        to="cakes-sweets"
+        smooth={true}
+        duration={500}
+        className="menu-link"
+        title="Cakes & Sweets"
+      >
+        <span className="menu-text">Cakes & Sweets</span>
+        <GiCupcake className="menu-icon" size={35} />
       </Link>
     </nav>
   );

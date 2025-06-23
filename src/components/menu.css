@@ -10,18 +10,35 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 999px;
   margin: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
+/* Σύνδεσμοι γενικά */
 .menu-wrapper a {
   font-family: 'Dancing Script', cursive;
   font-size: 1.5rem;
   color: #ffffff;
   cursor: pointer;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
 }
 
+/* Hover effect */
 .menu-wrapper a:hover {
   color: #bdbbbb;
+}
+
+/* Κείμενο και icons */
+.menu-text {
+  display: inline;
+}
+
+.menu-icon {
+  display: none;
 }
 
 /* Responsive για tablet και μικρότερα */
@@ -32,8 +49,8 @@
     padding: 0.5rem;
     flex-wrap: nowrap;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
+
   .menu-wrapper a {
     font-size: 1.2rem;
     white-space: nowrap;
@@ -44,19 +61,28 @@
 @media (max-width: 480px) {
   .menu-wrapper {
     flex-direction: row;
-    gap: 1.5rem;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem 0;
-    border-radius: 12px;
+    gap: 3.5rem;
+    padding: 1.1rem 2rem;
+    margin: 0;
+    border-radius: 0;
+    border-radius: 9999px;
+    box-sizing: border-box;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
   .menu-wrapper a {
-    font-size: 1rem;
+    font-size: 1.7rem;
     text-align: center;
-    width: auto;
-    white-space: wrap;
+  }
+
+  /* Εμφάνιση μόνο των icons */
+  .menu-text {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
   }
 }

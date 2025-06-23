@@ -11,7 +11,7 @@ function Layout() {
     AOS.init({
       duration: 800,
       easing: 'ease-out',
-      once: true, // τα animations γίνονται μία φορά
+      once: true, 
     });
   }, []);
 

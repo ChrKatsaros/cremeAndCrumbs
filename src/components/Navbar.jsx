@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { useLocation } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa6';
 import './navbar.css';
 
 function Navbar() {
@@ -43,15 +44,14 @@ function Navbar() {
           )}
         </div>
 
-        {/* Contact button (always visible) */}
+        {/* Contact button */}
         <div className="nav-C">
           <a href="/contact">Contact</a>
         </div>
       </nav>
 
-      {/* Mobile menu (side panel) */}
+      {/* Mobile menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-        {/* Close icon top-right */}
         <div className="close-icon" onClick={closeMenu}>
           <FaTimes size={24} color="white" />
         </div>
@@ -65,6 +65,31 @@ function Navbar() {
         <a href="/#menu" onClick={closeMenu}>
           Menu
         </a>
+
+        {/* Social icons */}
+        <div className="mobile-socials">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF size={35} />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram size={35} />
+          </a>
+          <a
+            href="https://t.me/yourchannel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTelegramPlane size={35} />
+          </a>
+        </div>
       </div>
     </>
   );
