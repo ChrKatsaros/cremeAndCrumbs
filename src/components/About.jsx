@@ -5,25 +5,12 @@ import aboutUs2 from '../assets/aboutUs2.webp';
 import aboutUs3 from '../assets/aboutUs3.webp';
 
 function About() {
-  const [imagesLoaded, setImagesLoaded] = useState({
-    header: false,
-    aboutUs2: false,
-    aboutUs3_1: false,
-    aboutUs3_2: false,
-    aboutUs3_3: false,
-  });
+  const [headerLoaded, setHeaderLoaded] = useState(false);
+  const [textReady, setTextReady] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // helper to check if όλα έχουν φορτώσει
-  const allLoaded = Object.values(imagesLoaded).every(Boolean);
-
-  // handlers για κάθε εικόνα
-  const handleImageLoad = (key) => {
-    setImagesLoaded((prev) => ({ ...prev, [key]: true }));
-  };
 
   return (
     <div className="aboutPage-wrapper">
@@ -33,13 +20,18 @@ function About() {
           src={aboutUsHeader}
           alt="Header"
           className="headerImage"
-          onLoad={() => handleImageLoad('header')}
+          onLoad={() => setHeaderLoaded(true)}
+          style={{
+            opacity: headerLoaded ? 1 : 0,
+
+            transition: 'opacity 3.2s ease, transform 1.2s ease',
+          }}
         />
         <img
           src={aboutUs3}
           alt="Eggs"
           className="eggsImage"
-          onLoad={() => handleImageLoad('aboutUs3_1')}
+          // προαιρετικά: χωρίς animation, μπορεί να μείνει σταθερό
         />
       </div>
 
@@ -47,8 +39,9 @@ function About() {
       <div
         className="aboutRightText"
         style={{
-          opacity: allLoaded ? 1 : 0,
-          transition: 'opacity 1s ease-in-out',
+          opacity: textReady ? 1 : 0,
+
+          transition: 'opacity 3.2s ease, transform 1.2s ease',
         }}
       >
         <h1>Over 60 Years of Making Butter</h1>
@@ -67,19 +60,17 @@ function About() {
             src={aboutUs2}
             alt="Decorative"
             className="decorativeImage1"
-            onLoad={() => handleImageLoad('aboutUs2')}
+            onLoad={() => setTextReady(true)} // όταν φορτώσει αυτή, δείξε το κείμενο
           />
           <img
             src={aboutUs3}
             alt="Decorative"
             className="decorativeImage2 topRight"
-            onLoad={() => handleImageLoad('aboutUs3_2')}
           />
           <img
             src={aboutUs3}
             alt="Decorative"
             className="decorativeImage2 bottomLeft"
-            onLoad={() => handleImageLoad('aboutUs3_3')}
           />
         </div>
       </div>

@@ -87,7 +87,7 @@
   line-height: 1.1;
   letter-spacing: 0.5px;
   transform-origin: center center;
-  animation: fadeGrow 1.9s ease forwards;
+  animation: fadeGrow 2.9s ease forwards;
   position: relative;
   top: -50px;
 }
