@@ -45,7 +45,7 @@
   line-height: 1.9;
   opacity: 0.95;
   position: relative;
-  top: -1.5rem;
+  top: -1.6rem;
 }
 
 .about-right {
@@ -133,7 +133,7 @@
   }
 
   .about-img-small {
-    display: none; /* Κρύβεται σε κινητά για καθαρότητα */
+    display: none;
   }
 
   .footer-text {
@@ -144,14 +144,14 @@
 
 @media (max-width: 480px) {
   .about-title {
-    font-size: 2.5rem;
+    font-size: 3.6rem;
   }
 
   .about-description {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .about-logo {
-    width: 110px;
+    width: 150px;
   }
 }
