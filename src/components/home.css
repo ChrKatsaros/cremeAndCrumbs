@@ -6,12 +6,37 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* Κοινές ιδιότητες για όλα τα video */
 .header-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 43%;
   filter: brightness(62%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Απόκρυψη και των δύο αρχικά */
+.desktop-video,
+.mobile-video {
+  display: none;
+}
+
+/* Εμφάνιση μόνο του desktop video σε οθόνες > 768px */
+@media (min-width: 769px) {
+  .desktop-video {
+    display: block;
+    object-position: center 43%;
+  }
+}
+
+/* Εμφάνιση μόνο του mobile video σε οθόνες <= 768px */
+@media (max-width: 768px) {
+  .mobile-video {
+    display: block;
+    object-position: center 50%;
+  }
 }
 
 .header-overlay {
@@ -28,6 +53,7 @@
   text-align: center;
   padding: 0 1rem;
   gap: 20px;
+  z-index: 2;
 }
 
 .header-title h1 {
@@ -65,7 +91,6 @@
 .scroll-button:hover {
   transform: scale(1.04);
   transition: transform 0.3s ease;
-
   opacity: 100%;
 }
 
@@ -87,50 +112,16 @@
   padding: 0 1.5rem;
 }
 
+/* -------- Responsive: Mobile -------- */
 @media (max-width: 768px) {
   .page-container {
-    padding: 0 !important; /* Λίγο μικρότερο για μικρές οθόνες */
+    padding: 0 !important;
+    width: 95vw;
+    padding: 0 1rem;
   }
 
   .home-page {
     gap: 0rem;
-  }
-  .header-video-container {
-    height: 100vh;
-
-    position: relative;
-    overflow: hidden;
-  }
-
-  .header-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 50%;
-    filter: brightness(62%);
-    position: absolute; /* καλύπτει τον container */
-    top: 0;
-    left: 0;
-  }
-
-  .header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-    color: white;
-    margin: 0;
-    padding: 0;
-    gap: 16px;
-    z-index: 2;
   }
 
   .header-title h1 {
@@ -154,12 +145,6 @@
     border-radius: 20px;
     opacity: 0.8;
     right: unset;
-
     align-self: center;
-  }
-
-  .page-container {
-    width: 95vw;
-    padding: 0 1rem;
   }
 }

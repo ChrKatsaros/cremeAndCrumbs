@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Element, Link } from 'react-scroll';
 import { useLocation } from 'react-router-dom';
 import Menu from './Menu';
 import Sections from './Sections';
-import headerVideo from '../assets/header-video.mp4';
+import headerVideoMobile from '../assets/header-video-mobile.mp4';
+import headerVideoDesktop from '../assets/header-video-desktop.mp4';
 import Welcome from './Welcome';
 import WhatWeOffer from './WhatWeOffer';
 import './home.css';
 
 function Home() {
   const location = useLocation();
-  const videoRef = useRef(null);
   const [shouldScroll, setShouldScroll] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
 
@@ -42,22 +42,35 @@ function Home() {
       <Element name="top" id="top" style={{ position: 'absolute', top: 0 }} />
 
       <section className="header-video-container">
+        {/* Desktop video */}
         <video
-          ref={videoRef}
           onLoadedData={handleVideoLoaded}
-          className="header-video"
+          className="header-video desktop-video"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
         >
-          <source src={headerVideo} type="video/mp4" />
+          <source src={headerVideoDesktop} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Mobile video */}
+        <video
+          onLoadedData={handleVideoLoaded}
+          className="header-video mobile-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        >
+          <source src={headerVideoMobile} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <div className="header-overlay">
-          {/* Απόκρυψη / εμφάνιση h1 και button μέχρι να φορτώσει το video */}
           <div
             className="header-title"
             style={{

@@ -228,8 +228,8 @@
 
   .whaWeOffer-header img {
     width: 190px;
-    top: 150px;
-    left: -70px;
-    transform: rotate(30deg);
+    top: 160px;
+    left: -80px;
+    transform: rotate(55deg);
   }
 }
