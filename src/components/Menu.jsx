@@ -16,7 +16,7 @@ function Menu() {
         className="home-icon"
         title="Go to top"
       >
-        <AiOutlineHome size={28} />
+        <AiOutlineHome size={30} />
       </Link>
 
       {/* Baked Goods - Croissant */}
@@ -28,7 +28,7 @@ function Menu() {
         title="Baked Goods"
       >
         <span className="menu-text">Baked Goods</span>
-        <GiCroissant className="menu-icon" size={35} />
+        <GiCroissant className="menu-icon" size={30} />
       </Link>
 
       {/* Drinks & Coffee - Coffee icon */}
@@ -40,7 +40,7 @@ function Menu() {
         title="Drinks & Coffee"
       >
         <span className="menu-text">Drinks & Coffee</span>
-        <FaCoffee className="menu-icon" size={35} />
+        <FaCoffee className="menu-icon" size={30} />
       </Link>
 
       {/* Cakes & Sweets - Cupcake */}
@@ -52,7 +52,7 @@ function Menu() {
         title="Cakes & Sweets"
       >
         <span className="menu-text">Cakes & Sweets</span>
-        <GiCupcake className="menu-icon" size={35} />
+        <GiCupcake className="menu-icon" size={30} />
       </Link>
     </nav>
   );

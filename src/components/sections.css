@@ -68,7 +68,7 @@
   /* Δύο εικόνες ανά σειρά σε κινητά */
   .menu-section-products {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .product-image {

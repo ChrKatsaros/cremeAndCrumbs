@@ -4,10 +4,9 @@
   align-items: center;
   padding: 1rem 2rem;
   background: #ffffff;
-  border-radius: 60px 12px 60px 12px;
+
   position: relative;
   overflow: hidden;
-  gap: 1rem;
 }
 
 /* === Left Side (Image) === */
@@ -201,7 +200,6 @@
   .hero-text p {
     font-size: 1.5rem;
     max-width: 95%;
-    margin: 0 auto 1.5rem auto;
   }
 
   .arrow,
@@ -222,19 +220,23 @@
   }
 
   .hero-text h1 {
-    font-size: 4.2rem;
+    font-size: 3.9rem;
     margin-top: 0;
     padding-top: 0;
   }
 
   .hero-text h3 {
     position: relative;
-    top: -2rem;
+    top: -3rem;
     font-size: 2.2rem;
+    text-align: center;
   }
 
   .hero-text p {
     font-size: 1.2rem;
+    margin-top: 0;
+
+    text-align: center;
   }
 
   .hero-image img {
@@ -270,6 +272,6 @@
   .hero-button {
     padding: 0.55rem 1.5rem;
 
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
+import { FaBars, FaTimes, FaFacebookF, FaPhoneAlt } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';
 import './navbar.css';
 
@@ -82,12 +82,8 @@ function Navbar() {
           >
             <FaInstagram size={35} />
           </a>
-          <a
-            href="https://t.me/yourchannel"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTelegramPlane size={35} />
+          <a href="tel:+1234567890">
+            <FaPhoneAlt size={35} />
           </a>
         </div>
       </div>

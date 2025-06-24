@@ -1,7 +1,7 @@
 /*-----------------------------------------Layout Css------------------------------------*/
 .app-wrapper {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   min-height: 100vh; /* <-- Ύψος του viewport, για να γεμίζει πάντα η οθόνη */
 }
 

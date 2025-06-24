@@ -11,13 +11,11 @@ function Footer() {
       <div className="footer-container">
         {/* Left - Contact Form */}
         <div className="footer-section contact-form">
-          <h3>Contact Us</h3>
+          <h3>Subscribe To Our NewsLetter</h3>
           <form>
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
             <input type="email" placeholder="Email" required />
-            <textarea placeholder="Your Message" required rows="3"></textarea>
-            <button type="submit">Send</button>
+
+            <button type="submit">Subscribe</button>
           </form>
         </div>
 

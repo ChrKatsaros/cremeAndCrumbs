@@ -195,7 +195,7 @@
   }
 
   .aboutRightText h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     top: 0;
     padding-bottom: 2.8rem;
     transform: rotate(-10deg);
@@ -258,12 +258,12 @@
   }
 
   .aboutRightText h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     transform: rotate(-8deg);
   }
 
   .aboutRightText p {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 
   .decorativeImageWrapper {
