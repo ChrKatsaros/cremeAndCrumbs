@@ -31,11 +31,10 @@ function Welcome() {
         <h1>Welcome to Crème & Crumbs</h1>
         <h3>Your Sweet Escape</h3>
         <p>
-          At <strong>Crème & Crumbs</strong>, we believe every pastry is a small
-          work of art — lovingly handcrafted and infused with the elegance of
-          European tradition. From the first delicate bite to the last sweet
-          crumb, each creation invites you to experience a moment of warmth,
-          refinement, and indulgence.
+          <em>
+            “At <strong>Crème & Crumbs</strong>, every pastry is a small moment
+            of indulgence — elegant, handmade, unforgettable.”
+          </em>
         </p>
 
         <Link to="/about" className="hero-button">

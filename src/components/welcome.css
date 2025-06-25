@@ -212,6 +212,8 @@
   .hero-text {
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: -30px;
   }
   .hero-button {
     align-self: center;
@@ -220,7 +222,7 @@
   }
 
   .hero-text h1 {
-    font-size: 3.9rem;
+    font-size: 2.4rem;
     margin-top: 0;
     padding-top: 0;
   }
@@ -228,14 +230,15 @@
   .hero-text h3 {
     position: relative;
     top: -3rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-top: 0;
-
+    position: relative;
+    top: -2.2rem;
     text-align: center;
   }
 
@@ -256,7 +259,7 @@
   .hero-image {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
-    height: 200px;
+    height: 250px;
   }
 
   .hero-image2 img {
@@ -271,7 +274,8 @@
 
   .hero-button {
     padding: 0.55rem 1.5rem;
-
+    position: relative;
+    top: -3rem;
     font-size: 1.1rem;
   }
 }

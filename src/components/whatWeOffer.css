@@ -223,13 +223,13 @@
     padding: 1rem;
     padding-left: 3rem;
     padding-bottom: 2rem;
-    bottom: 20px;
+    bottom: 29px;
   }
 
   .whaWeOffer-header img {
     width: 190px;
-    top: 160px;
-    left: -80px;
-    transform: rotate(55deg);
+    top: 130px;
+    left: -90px;
+    transform: rotate(45deg);
   }
 }

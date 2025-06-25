@@ -13,8 +13,7 @@ function WhatWeOffer() {
         <div className="whaWeOffer-header-content">
           <h1>What We Offer</h1>
           <p className="subtitle">
-            Discover our exquisite range of freshly baked delights crafted with
-            love.
+            Handcrafted pastries, elegant and irresistible.
           </p>
         </div>
       </div>
