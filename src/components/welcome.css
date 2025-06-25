@@ -69,6 +69,10 @@
   margin-bottom: 2rem;
 }
 
+.welcome-page-logo {
+  display: none;
+}
+
 /* === Button === */
 .hero-button {
   display: inline-block;
@@ -209,6 +213,14 @@
 }
 
 @media (max-width: 480px) {
+  .welcome-page-logo {
+    display: block;
+    width: 180px;
+    height: auto;
+    align-self: center;
+    position: relative;
+    top: -3rem;
+  }
   .hero-text {
     display: flex;
     flex-direction: column;
@@ -239,7 +251,7 @@
     font-size: 1.3rem;
     margin-top: 0;
     position: relative;
-    top: -2.2rem;
+    top: -2.5rem;
     text-align: center;
   }
 
