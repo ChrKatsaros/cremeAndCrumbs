@@ -215,7 +215,7 @@
 @media (max-width: 480px) {
   .welcome-page-logo {
     display: block;
-    width: 180px;
+    width: 100px;
     height: auto;
     align-self: center;
     position: relative;
@@ -242,7 +242,7 @@
 
   .hero-text h3 {
     position: relative;
-    top: -2rem;
+    top: -2.2rem;
     font-size: 1rem;
     text-align: center;
   }
